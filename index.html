@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>js表格列拖动排序代码</title>
+<script src="./js/navmodule.js"></script>
+<link href="css/columnDrag.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  <nav-component></nav-component>
+ 
+<!-- <h1 class="datouwang">JS表格列自由拖拽排序特效代码</h1> -->
+
+
+
+<div id="chenkbox">
+	<table id="tableSort">
+		<tr>
+			<!-- <th onclick="sortTable('tableSort',4)" title="点击排序"> 股票代码 </th> -->
+			<th onclick="sortTable('tableSort',0)" title="点击排序"> 分时 </th>
+			<th onclick="sortTable('tableSort',1)" title="点击排序"> 日K </th>
+			<th onclick="sortTable('tableSort',2)" title="点击排序"> 周K </th>
+			<th onclick="sortTable('tableSort',3)" title="点击排序"> 月K </th>
+		</tr>
+		<tr>
+			<!-- <td>000001</td> -->
+			<td><img src="http://image.sinajs.cn/newchart/min/n/nsh000001.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/daily/n/nsh000001.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/weekly/n/nsh000001.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/monthly/n/nsh000001.gif" width="100%"></td>
+		</tr>
+		<tr>
+			<td><img src="http://image.sinajs.cn/newchart/min/n/nsh601360.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/daily/n/sh601360.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/weekly/n/sh601360.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/monthly/n/sh601360.gif" width="100%"></td>
+		</tr>
+		<tr>
+			<td><img src="http://image.sinajs.cn/newchart/min/n/sh600315.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/daily/n/sh600315.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/weekly/n/sh600315.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/monthly/n/sh600315.gif" width="100%"></td>
+		<tr>
+		<tr>
+			<td><img src="http://image.sinajs.cn/newchart/min/n/sz002537.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/daily/n/sz002537.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/weekly/n/sz002537.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/monthly/n/sz002537.gif" width="100%"></td>
+		<tr>
+		<tr>
+			<td><img src="http://image.sinajs.cn/newchart/min/n/sz002537.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/daily/n/sz002537.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/weekly/n/sz002537.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/monthly/n/sz002537.gif" width="100%"></td>
+		<tr>
+		<tr>
+			<td><img src="http://image.sinajs.cn/newchart/min/n/sz000612.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/daily/n/sz000612.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/weekly/n/sz000612.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/monthly/n/sz000612.gif" width="100%"></td>
+		<tr>
+		<tr>
+			<td><img src="http://image.sinajs.cn/newchart/min/n/sz002616.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/daily/n/sz002616.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/weekly/n/sz002616.gif" width="100%"></td>
+			<td><img src="http://image.sinajs.cn/newchart/monthly/n/sz002616.gif" width="100%"></td>
+		<tr>	
+	</table>
+	<div id="box"></div>
+</div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+	<p>适用浏览器：不支持Safari、IE8及以下浏览器。</p>
+	<p>来源：<a href="https://shejidaohang.com/" target="_blank">设计导航网</a></p>
+</div>
+<script src="js/columnDrag.js"></script>
+
+</body>
+</html>
