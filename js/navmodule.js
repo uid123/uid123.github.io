@@ -34,7 +34,7 @@ class NavComponent extends HTMLElement {
       <div class="nav">
         <ul>
           <li><a href="./hk.html">HK</a></li>
-          <li><a href="page1.html">持仓</a></li>
+          <li><a href="p./chicang.html">持仓</a></li>
           <li><a href="page2.html">机器人</a></li>
           <li><a href="page3.html">华为</a></li>
           <li><a href="page3.html">Page 4</a></li>
