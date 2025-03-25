@@ -69,3 +69,24 @@ class NavComponent extends HTMLElement {
   }
 }
 customElements.define('nav-component', NavComponent);
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 获取 nav-component 元素
+  const navComponent = document.querySelector('nav-component');
+  if (navComponent) {
+      // 获取 Shadow DOM
+      const shadowRoot = navComponent.shadowRoot;
+      if (shadowRoot) {
+          // 在 Shadow DOM 中查找所有 li 元素
+          const listItems = shadowRoot.querySelectorAll('li');
+          listItems.forEach(item => {
+              item.addEventListener('click', function () {
+                  listItems.forEach(li => {
+                      li.style.backgroundColor = '';
+                  });
+                  this.style.backgroundColor = 'lightblue';
+              });
+          });
+      }
+  }
+});
