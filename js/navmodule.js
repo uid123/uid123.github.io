@@ -69,17 +69,3 @@ class NavComponent extends HTMLElement {
   }
 }
 customElements.define('nav-component', NavComponent);
-
-<script>
-const listItems = document.querySelectorAll('li');
-listItems.forEach(item => {
-    item.addEventListener('click', function () {
-        // 先将所有 li 元素的背景颜色重置
-        listItems.forEach(li => {
-            li.style.backgroundColor = '';
-        });
-        // 再设置当前点击的 li 元素的背景颜色
-        this.style.backgroundColor = 'lightblue';
-    });
-});
-</script>
