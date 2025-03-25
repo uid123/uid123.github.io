@@ -70,6 +70,7 @@ class NavComponent extends HTMLElement {
 }
 customElements.define('nav-component', NavComponent);
 
+<script>
 const listItems = document.querySelectorAll('li');
 listItems.forEach(item => {
     item.addEventListener('click', function () {
@@ -81,3 +82,4 @@ listItems.forEach(item => {
         this.style.backgroundColor = 'lightblue';
     });
 });
+</script>
