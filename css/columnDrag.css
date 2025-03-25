@@ -84,3 +84,6 @@ td {
 #box p {
   line-height: 34px;
 }
+.selected {
+  background-color: #96b97d;
+}

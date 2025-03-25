@@ -33,35 +33,35 @@ class NavComponent extends HTMLElement {
       </style>
       <div class="nav">
         <ul>
-          <li><a href="./hk.html">HK</a></li>
-          <li><a href="./chicang.html">持仓</a></li>
-          <li><a href="page2.html">机器人</a></li>
-          <li><a href="page3.html">华为</a></li>
-          <li><a href="bankuai.html">概念板块</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 5</a></li>
-          <li><a href="page3.html">Page 6</a></li>
-          <li><a href="page3.html">Page 6</a></li>
-          <li><a href="page3.html">Page 6</a></li>
-          <li><a href="page3.html">Page 6</a></li>
+          <li class="selected"><a href="./hk.html">HK</a></li>
+          <li class="selected"><a href="./chicang.html">持仓</a></li>
+          <li class="selected"><a href="page2.html">机器人</a></li>
+          <li class="selected"><a href="page3.html">华为</a></li>
+          <li class="selected"><a href="bankuai.html">概念板块</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 5</a></li>
+          <li class="selected"><a href="page3.html">Page 6</a></li>
+          <li class="selected"><a href="page3.html">Page 6</a></li>
+          <li class="selected"><a href="page3.html">Page 6</a></li>
+          <li class="selected"><a href="page3.html">Page 6</a></li>
         </ul>
       </div>
     `;
@@ -69,3 +69,15 @@ class NavComponent extends HTMLElement {
   }
 }
 customElements.define('nav-component', NavComponent);
+
+const listItems = document.querySelectorAll('li');
+listItems.forEach(item => {
+    item.addEventListener('click', function () {
+        // 先将所有 li 元素的背景颜色重置
+        listItems.forEach(li => {
+            li.style.backgroundColor = '';
+        });
+        // 再设置当前点击的 li 元素的背景颜色
+        this.style.backgroundColor = 'lightblue';
+    });
+});
