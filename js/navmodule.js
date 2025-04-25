@@ -31,12 +31,7 @@ class NavComponent extends HTMLElement {
           text-decoration: none;
         }
       </style>
-      <div id="password-prompt">
-        <label for="password">请输入密码:</label>
-        <input type="password" id="password">
-        <button onclick="checkPassword()">提交</button>
-    </div>
-      <div class="nav" id="content">
+      <div class="nav">
         <ul>
           <li><a href="./hk.html">HK</a></li>
           <li><a href="./chicang.html">持仓</a></li>
@@ -69,41 +64,6 @@ class NavComponent extends HTMLElement {
           <li><a href="page3.html">Page 6</a></li>
         </ul>
       </div>
-      <script>
-        const correctPassword = "your_password";
-        const expirationTime = 24 * 60 * 60 * 1000; // 24 小时，单位为毫秒
-
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            if (password === correctPassword) {
-                // 密码正确，记录时间戳
-                localStorage.setItem('lastAuthTime', Date.now());
-                // 显示内容
-                document.getElementById('password-prompt').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-            } else {
-                alert('密码错误，请重新输入。');
-            }
-        }
-
-        function checkExpiration() {
-            const lastAuthTime = localStorage.getItem('lastAuthTime');
-            if (lastAuthTime) {
-                const currentTime = Date.now();
-                if (currentTime - parseInt(lastAuthTime) < expirationTime) {
-                    // 未过期，显示内容
-                    document.getElementById('password-prompt').style.display = 'none';
-                    document.getElementById('content').style.display = 'block';
-                } else {
-                    // 已过期，清除时间戳
-                    localStorage.removeItem('lastAuthTime');
-                }
-            }
-        }
-
-        // 页面加载时检查过期时间
-        checkExpiration();
-    </script>
     `;
     shadow.innerHTML = navHTML;
   }
